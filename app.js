@@ -1,5 +1,6 @@
 const express = require("express");
 const database = require("./config/database");
+const cors = require("cors");
 const app = express();
 
 // Routes import
@@ -7,6 +8,8 @@ const userRoutes = require("./routes/user.js");
 const eventRoutes = require("./routes/event.js");
 const ticketRoutes = require("./routes/ticket.js");
 const orderRoutes = require("./routes/order.js");
+
+app.use(cors());
 
 require("dotenv").config();
 
